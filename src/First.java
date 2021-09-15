@@ -85,7 +85,7 @@ public class First {
             System.out.println("Дешивровка: " + DeCodeWord + " - шаг на: " + h); // Вывод
         }
         return null;
-    } // Дешифровка
+    } // Дешиф
 
     public static void main(String[] args) throws IOException {
         First c = new First(); First cc = new First();
