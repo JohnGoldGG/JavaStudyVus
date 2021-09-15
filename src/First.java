@@ -41,7 +41,7 @@ public class First {
                     for (int h = 0; h < ALPHABET.length; h++) { // Переходим к массиву с заглавнми
                         if (ALPHABET[h] == ch) { // В этом ифе все то же самое, что и в прописных
                             if (h + k >= ALPHABET.length) {
-                                CodeWord += ALPHABET[j + k - ALPHABET.length];
+                                CodeWord += ALPHABET[j + k - ALPHABET.length-2];
                                 break;
                             }
                             CodeWord += ALPHABET[h + k];
@@ -51,6 +51,7 @@ public class First {
                 }
             }
         }
+        System.out.println(CodeWord); // Вывод
         return CodeWord;
     } // Шифровка
 
@@ -89,7 +90,6 @@ public class First {
 
     public static void main(String[] args) throws IOException {
         First c = new First(); First cc = new First();
-        c.HW(coder(NF(), 4));
         c.DeCoder(coder(NF(), 4));
     }
 }
