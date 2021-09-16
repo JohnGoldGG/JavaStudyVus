@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class First {
     public static char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -11,7 +12,7 @@ public class First {
 
     public static String NF() {
         int inChar;
-        String s = " ";
+        String s = "";
         try {
             inChar = System.in.read();
             while (System.in.available() > 0) {
@@ -89,7 +90,10 @@ public class First {
     } // Дешиф
 
     public static void main(String[] args) throws IOException {
-        First c = new First(); First cc = new First();
-        c.DeCoder(coder(NF(), 4));
+        First c = new First();
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите шаг: ");
+        int k = in.nextInt();
+        c.DeCoder(coder(NF(), k));
     }
 }
